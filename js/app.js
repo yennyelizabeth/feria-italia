@@ -13,18 +13,18 @@ new WOW().init();
 
 var sponsorsIcons = document.getElementById("sponsors-icons");
 var sponsorsDiv = document.getElementById("sponsors-div");
-
+$('.scroll-top-mobile').hide();
 
 $('.carousel').carousel()
 
 window.onscroll = function () {
   //var scroll = window.scrollTop();
   var scroll = document.documentElement.scrollTop || document.body.scrollTop;
-  //console.log(scroll);
-  if (scroll > 640) {
-    //console.log('supera a 630');
+  console.log(scroll);
+  if (scroll > 100) {
+    $('.scroll-top-mobile').show();
   } else {
-    //console.log('no supera');
+    $('.scroll-top-mobile').hide();
   }
 };
 

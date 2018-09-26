@@ -1,25 +1,30 @@
-@font-face {
-  font-family: "Lucida Bright";
-  src: url("LucidaBright-Italic.eot");
-  src: url("LucidaBright-Italic.eot?#iefix") format("embedded-opentype"), url("LucidaBright-Italic.woff2") format("woff2"), url("LucidaBright-Italic.woff") format("woff"), url("LucidaBright-Italic.ttf") format("truetype");
-  font-weight: normal;
-  font-style: italic;
-}
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Libre Franklin", sans-serif;
 }
 
 h1, h2, h3, h4 {
-  font-family: "Lucida Bright";
-  font-style: italic;
+  font-family: "Libre Franklin", sans-serif;
   font-weight: 400;
+  margin-bottom: 1.2em;
 }
 
 .about, .auspiciador, .programa {
   padding: 2.5em 0;
+}
+
+.scroll-top-mobile {
+  position: fixed;
+  /* outline: 3px solid pink; */
+  z-index: 99999;
+  bottom: 75px;
+  font-size: 2rem;
+  right: 10px;
+  background-color: #000;
+  color: #fff;
+  padding: 0.2em;
 }
 
 .enogastronomia {
@@ -33,6 +38,7 @@ h1, h2, h3, h4 {
   margin-bottom: 3em;
 }
 .enogastronomia .stands-list img {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.19);
   max-width: 60%;
   margin-bottom: 1em;
 }
@@ -40,19 +46,17 @@ h1, h2, h3, h4 {
   list-style: none;
 }
 .enogastronomia .stands-list .see-more {
-  background-color: #0C8D1F;
+  background-color: #027235;
   color: #ffeb83;
   border: none;
   font-size: 1rem;
   padding: 0.2em 1em;
-  border-radius: 20px;
-  /* font-weight: 500; */
 }
 
 header .upper-nav {
   background-color: #000;
   color: #fff;
-  border-top: 4px solid #0C8D1F;
+  border-top: 4px solid #027235;
   padding: 0.2em;
   font-size: 0.9rem;
 }
@@ -82,7 +86,7 @@ header .mobile-menu .mobile-main-button {
   display: inline;
 }
 header .mobile-menu .mobile-main-button button {
-  background-color: #0C8D1F;
+  background-color: #027235;
   border: none;
   border-radius: 0.2em;
   color: #5f5f5f;
@@ -126,7 +130,7 @@ header .menu {
   justify-content: space-evenly;
 }
 header .menu button {
-  background-color: #0C8D1F;
+  background-color: #027235;
   border: none;
   color: #fff;
   font-size: 0.9rem;
@@ -157,7 +161,7 @@ header .menu ul li a {
   color: #848688;
 }
 header .menu ul li a:hover {
-  color: #0C8D1F;
+  color: #027235;
   font-weight: 500;
 }
 header .menu ul li:active {
@@ -196,8 +200,6 @@ header .menu-desktop a + p {
   background-color: #50505066;
 }
 .carousel-item .carousel-caption h3 {
-  font-family: "Lucida Bright";
-  font-style: italic;
   font-weight: 400;
 }
 
@@ -219,12 +221,31 @@ header .menu-desktop a + p {
   font-family: "Quattrocento Sans", sans-serif;
   font-size: 1.2rem;
 }
-.about .about-title {
+
+.about-title {
   margin-bottom: 2.5em;
 }
-.about .about-div img {
+
+.about-div {
+  margin-bottom: 2em;
+  box-shadow: 2px 4px 6px 1px rgba(0, 0, 0, 0.19);
+}
+.about-div img {
   display: inline-block;
-  width: 60%;
+  width: 100%;
+}
+.about-div div {
+  background-color: #000;
+  color: #fff;
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about-div div h4, .about-div div p {
+  font-size: 1rem;
+  margin-bottom: 0;
 }
 
 .objective p {
@@ -232,12 +253,15 @@ header .menu-desktop a + p {
   font-size: 1.2rem;
 }
 .objective i {
-  color: #0C8D1F;
+  color: #027235;
   margin-right: 0.5em;
 }
 
 .programa {
   background-color: #f7f7f7;
+}
+.programa .programa-dia {
+  margin-top: 1.5em;
 }
 .programa .fecha-div h4 {
   margin: 0;
@@ -291,8 +315,20 @@ header .menu-desktop a + p {
 }
 
 .contact {
+  background-color: #027235;
+  color: #fff;
   padding-top: 2em;
   padding-bottom: 2em;
+}
+.contact .piazza-italia, .contact .cam-comercio {
+  padding: 1em 2em;
+}
+.contact .piazza-italia h3, .contact .cam-comercio h3 {
+  margin-bottom: 0.9em;
+  font-size: 1.4rem;
+}
+.contact .piazza-italia span, .contact .cam-comercio span {
+  margin-right: 0.5em;
 }
 .contact .register-info {
   padding: 0.2em 2em;
@@ -304,7 +340,7 @@ header .menu-desktop a + p {
   margin-right: 1em;
 }
 .contact .register-info input {
-  background-color: #0C8D1F;
+  background-color: #027235;
   border: none;
   border-bottom: 2px solid #fff;
   color: #fff;

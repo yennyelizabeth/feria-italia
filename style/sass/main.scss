@@ -1,33 +1,35 @@
-@font-face {
-  font-family: 'Lucida Bright';
-  src: url('LucidaBright-Italic.eot');
-  src: url('LucidaBright-Italic.eot?#iefix') format('embedded-opentype'),
-      url('LucidaBright-Italic.woff2') format('woff2'),
-      url('LucidaBright-Italic.woff') format('woff'),
-      url('LucidaBright-Italic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
-  
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Libre Franklin', sans-serif;
 }
   
   
 h1, h2, h3, h4 {
-  font-family: 'Lucida Bright';
-  font-style: italic;
-  font-weight: 400;
+	font-family: 'Libre Franklin', sans-serif;
+  // font-style: italic;
+	font-weight: 400;
+	margin-bottom: 1.2em;
 }
   
 .about, .auspiciador, .programa {
   padding: 2.5em 0;
 }
 
-$verde : #0C8D1F;
+.scroll-top-mobile {
+	position: fixed;
+	/* outline: 3px solid pink; */
+	z-index: 99999;
+	bottom: 75px;
+	font-size: 2rem;
+	right: 10px;
+	background-color: #000;
+	color: #fff;
+	padding: 0.2em;
+}
+
+$verde : #027235;
 $amarillo : #ffeb83;;
 //MENUS
 .enogastronomia {
@@ -39,6 +41,7 @@ $amarillo : #ffeb83;;
 	.stands-list {
     margin-bottom: 3em;
 		img {
+				box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.19);
 				max-width: 60%;
 				margin-bottom: 1em;
 			}		
@@ -51,8 +54,6 @@ $amarillo : #ffeb83;;
 			border: none;
 			font-size: 1rem;
 			padding: 0.2em 1em;
-			border-radius: 20px;
-			/* font-weight: 500; */
 		}		
 	}
 }
@@ -219,8 +220,8 @@ header {
     /* opacity: 5; */
 		background-color: #50505066;
 		h3 {
-			font-family: 'Lucida Bright';
-			font-style: italic;
+			// font-family: 'Lucida Bright';
+			// font-style: italic;
 			font-weight: 400;
 		}
   }
@@ -248,16 +249,32 @@ header {
 		font-family: 'Quattrocento Sans', sans-serif;
 		font-size: 1.2rem;
 	}	
+	
+}
 	.about-title {
 		margin-bottom: 2.5em;
 	}	
 	.about-div {
+		margin-bottom: 2em;
+		box-shadow: 2px 4px 6px 1px rgba(0, 0, 0, 0.19);
 		img {
 			display: inline-block;
-			width: 60%;
+			width: 100%;
 		}
+		div {
+			background-color: #000;
+			color: #fff;
+			height: 65px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			h4, p {
+				font-size: 1rem;
+				margin-bottom: 0;
+			}
+		}		
 	}	
-}
 
 //OBJETIVOS
 .objective {
@@ -274,6 +291,9 @@ header {
 //PROGRAMA
 .programa {
 	background-color: #f7f7f7;
+	.programa-dia {
+    margin-top: 1.5em;
+	}
   .fecha-div {
 		h4{
 			margin: 0;
@@ -335,9 +355,20 @@ header {
 
 //CONTACTO
 .contact {
-	//background-color: $verde;
+	background-color: $verde;
+	color: #fff;
   padding-top: 2em;
-  padding-bottom: 2em;
+	padding-bottom: 2em;
+	.piazza-italia, .cam-comercio {
+		padding: 1em 2em;
+		h3 {
+			margin-bottom: 0.9em;
+			font-size: 1.4rem;
+		}
+		span {
+			margin-right: 0.5em;
+		}
+	}
   .register-info {
 		padding: 0.2em 2em;
 		p {
